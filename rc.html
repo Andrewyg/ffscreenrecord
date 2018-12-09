@@ -44,7 +44,7 @@
           }
         }).then(returnedStream => {
           stream = returnedStream;
-          video.src = URL.createObjectURL(stream);
+          video.src = URL.createObjectURL(stream, ()=>{}, ()=>{});
           getScreen.style.display = "none";
           stopScreen.style.display = "inline";
         }).catch(err => {
